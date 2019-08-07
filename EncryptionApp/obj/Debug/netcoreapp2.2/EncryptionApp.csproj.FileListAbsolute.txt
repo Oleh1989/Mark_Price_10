@@ -1,0 +1,14 @@
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\bin\Debug\netcoreapp2.2\EncryptionApp.deps.json
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\bin\Debug\netcoreapp2.2\EncryptionApp.runtimeconfig.json
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\bin\Debug\netcoreapp2.2\EncryptionApp.runtimeconfig.dev.json
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\bin\Debug\netcoreapp2.2\EncryptionApp.dll
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\bin\Debug\netcoreapp2.2\EncryptionApp.pdb
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\bin\Debug\netcoreapp2.2\CryptographyLib.dll
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\bin\Debug\netcoreapp2.2\CryptographyLib.pdb
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\obj\Debug\netcoreapp2.2\EncryptionApp.csprojAssemblyReference.cache
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\obj\Debug\netcoreapp2.2\EncryptionApp.csproj.CoreCompileInputs.cache
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\obj\Debug\netcoreapp2.2\EncryptionApp.AssemblyInfoInputs.cache
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\obj\Debug\netcoreapp2.2\EncryptionApp.AssemblyInfo.cs
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\obj\Debug\netcoreapp2.2\EncryptionApp.csproj.CopyComplete
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\obj\Debug\netcoreapp2.2\EncryptionApp.dll
+D:\Projects\Mar_Price_10\CryptographyLib\EncryptionApp\obj\Debug\netcoreapp2.2\EncryptionApp.pdb

@@ -1,0 +1,9 @@
+D:\Projects\Mar_Price_10\CryptographyLib\CryptographyLib\bin\Debug\netstandard2.0\CryptographyLib.deps.json
+D:\Projects\Mar_Price_10\CryptographyLib\CryptographyLib\bin\Debug\netstandard2.0\CryptographyLib.dll
+D:\Projects\Mar_Price_10\CryptographyLib\CryptographyLib\bin\Debug\netstandard2.0\CryptographyLib.pdb
+D:\Projects\Mar_Price_10\CryptographyLib\CryptographyLib\obj\Debug\netstandard2.0\CryptographyLib.csprojAssemblyReference.cache
+D:\Projects\Mar_Price_10\CryptographyLib\CryptographyLib\obj\Debug\netstandard2.0\CryptographyLib.csproj.CoreCompileInputs.cache
+D:\Projects\Mar_Price_10\CryptographyLib\CryptographyLib\obj\Debug\netstandard2.0\CryptographyLib.AssemblyInfoInputs.cache
+D:\Projects\Mar_Price_10\CryptographyLib\CryptographyLib\obj\Debug\netstandard2.0\CryptographyLib.AssemblyInfo.cs
+D:\Projects\Mar_Price_10\CryptographyLib\CryptographyLib\obj\Debug\netstandard2.0\CryptographyLib.dll
+D:\Projects\Mar_Price_10\CryptographyLib\CryptographyLib\obj\Debug\netstandard2.0\CryptographyLib.pdb
