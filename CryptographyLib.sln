@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptographyLib", "CryptographyLib\CryptographyLib.csproj", "{B2530AFD-90A7-4CD5-B129-F85049747F4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2530AFD-90A7-4CD5-B129-F85049747F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2530AFD-90A7-4CD5-B129-F85049747F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2530AFD-90A7-4CD5-B129-F85049747F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2530AFD-90A7-4CD5-B129-F85049747F4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE19ABEF-CBBB-46F1-AC1C-12F8BDAD0679}
+	EndGlobalSection
+EndGlobal
