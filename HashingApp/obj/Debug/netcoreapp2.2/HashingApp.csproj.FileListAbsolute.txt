@@ -1,0 +1,14 @@
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\bin\Debug\netcoreapp2.2\HashingApp.deps.json
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\bin\Debug\netcoreapp2.2\HashingApp.runtimeconfig.json
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\bin\Debug\netcoreapp2.2\HashingApp.runtimeconfig.dev.json
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\bin\Debug\netcoreapp2.2\HashingApp.dll
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\bin\Debug\netcoreapp2.2\HashingApp.pdb
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\bin\Debug\netcoreapp2.2\CryptographyLib.dll
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\bin\Debug\netcoreapp2.2\CryptographyLib.pdb
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\obj\Debug\netcoreapp2.2\HashingApp.csprojAssemblyReference.cache
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\obj\Debug\netcoreapp2.2\HashingApp.csproj.CoreCompileInputs.cache
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\obj\Debug\netcoreapp2.2\HashingApp.AssemblyInfoInputs.cache
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\obj\Debug\netcoreapp2.2\HashingApp.AssemblyInfo.cs
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\obj\Debug\netcoreapp2.2\HashingApp.csproj.CopyComplete
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\obj\Debug\netcoreapp2.2\HashingApp.dll
+D:\Projects\Mar_Price_10\CryptographyLib\HashingApp\obj\Debug\netcoreapp2.2\HashingApp.pdb

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptographyLib", "Cryptogr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptionApp", "EncryptionApp\EncryptionApp.csproj", "{96FA4F9D-7A24-4802-BF41-D2201ADE8056}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashingApp", "HashingApp\HashingApp.csproj", "{F70D5289-99BD-4F35-8A79-71B88C4B6638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignatureApp", "SignatureApp\SignatureApp.csproj", "{9C75FF54-952F-4D32-ACE0-69FD139BD002}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{96FA4F9D-7A24-4802-BF41-D2201ADE8056}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96FA4F9D-7A24-4802-BF41-D2201ADE8056}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96FA4F9D-7A24-4802-BF41-D2201ADE8056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F70D5289-99BD-4F35-8A79-71B88C4B6638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F70D5289-99BD-4F35-8A79-71B88C4B6638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F70D5289-99BD-4F35-8A79-71B88C4B6638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F70D5289-99BD-4F35-8A79-71B88C4B6638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C75FF54-952F-4D32-ACE0-69FD139BD002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C75FF54-952F-4D32-ACE0-69FD139BD002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C75FF54-952F-4D32-ACE0-69FD139BD002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C75FF54-952F-4D32-ACE0-69FD139BD002}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

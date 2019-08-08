@@ -1,0 +1,14 @@
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\obj\Debug\netcoreapp2.2\SignatureApp.csprojAssemblyReference.cache
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\obj\Debug\netcoreapp2.2\SignatureApp.csproj.CoreCompileInputs.cache
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\obj\Debug\netcoreapp2.2\SignatureApp.AssemblyInfoInputs.cache
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\obj\Debug\netcoreapp2.2\SignatureApp.AssemblyInfo.cs
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\bin\Debug\netcoreapp2.2\SignatureApp.deps.json
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\bin\Debug\netcoreapp2.2\SignatureApp.runtimeconfig.json
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\bin\Debug\netcoreapp2.2\SignatureApp.runtimeconfig.dev.json
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\bin\Debug\netcoreapp2.2\SignatureApp.dll
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\bin\Debug\netcoreapp2.2\SignatureApp.pdb
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\bin\Debug\netcoreapp2.2\CryptographyLib.dll
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\bin\Debug\netcoreapp2.2\CryptographyLib.pdb
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\obj\Debug\netcoreapp2.2\SignatureApp.csproj.CopyComplete
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\obj\Debug\netcoreapp2.2\SignatureApp.dll
+D:\Projects\Mar_Price_10\CryptographyLib\SignatureApp\obj\Debug\netcoreapp2.2\SignatureApp.pdb

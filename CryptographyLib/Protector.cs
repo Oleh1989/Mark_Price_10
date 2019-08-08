@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace CryptographyLib
 {
-    public class Protector
+    public static class Protector
     {
         // Размер должен составлять не менее 8 байт,
         // мы будем использовать 16 байт
@@ -47,5 +47,123 @@ namespace CryptographyLib
             return Encoding.Unicode.GetString(ms.ToArray());
         }
 
+
+        // ------------------------------------------------------------------------------------------------
+
+        private static Dictionary<string, User> Users = new Dictionary<string, User>();
+
+        public static User Register(string username, string password)
+        {
+            // Генерация соли
+            var rng = RandomNumberGenerator.Create();
+            var saltBytes = new byte[16];
+            rng.GetBytes(saltBytes);
+            var saltText = Convert.ToBase64String(saltBytes);
+
+            // Генерация соленого и хешированного пароля
+            var sha = SHA256.Create();
+            var saltedPassword = password + saltText;
+            var saltedHashedPassword = Convert.ToBase64String(
+                sha.ComputeHash(Encoding.Unicode.GetBytes(saltedPassword)));
+
+            var user = new User
+            {
+                Name = username,
+                Salt = saltText,
+                SaltedHashedPassword = saltedHashedPassword
+            };
+            Users.Add(user.Name, user);
+
+            return user;
+        }
+
+        public static bool CheckPassword(string username, string password)
+        {
+            if (!Users.ContainsKey(username))            
+                return false;
+
+            var user = Users[username];
+
+            // Повторная генерация соленого и хешированного пароля
+            var sha = SHA256.Create();
+            var saltedPassword = password + user.Salt;
+            var saltedHashedPassword = Convert.ToBase64String(
+                sha.ComputeHash(Encoding.Unicode.GetBytes(saltedPassword)));
+
+            return (saltedHashedPassword == user.SaltedHashedPassword);
+        }
+
+        // ------------------------------------------------------------------------------------------------
+
+        public static string PublickKey;
+
+        public static string ToXmlStringExt(this RSA rsa, bool includePrivateParametrs)
+        {
+            var p = rsa.ExportParameters(includePrivateParametrs);
+            XElement xml;
+            if (includePrivateParametrs)
+            {
+                xml = new XElement("RSAKeyValue", new XElement("Modulus", Convert.ToBase64String(p.Modulus)),
+                    new XElement("Exponent", Convert.ToBase64String(p.Exponent)),
+                    new XElement("P", Convert.ToBase64String(p.P)),
+                    new XElement("Q", Convert.ToBase64String(p.Q)),
+                    new XElement("DP", Convert.ToBase64String(p.DP)),
+                    new XElement("DQ", Convert.ToBase64String(p.DQ)),
+                    new XElement("InverseQ", Convert.ToBase64String(p.InverseQ)));
+            }
+            else
+            {
+                xml = new XElement("RSAKeyValue", new XElement("Modulus", Convert.ToBase64String(p.Modulus)),
+                    new XElement("Exponent", Convert.ToBase64String(p.Exponent)));
+            }
+            return xml?.ToString();
+        }
+
+        public static void FromXmlStringExt(this RSA rsa, string parametrsAsXml)
+        {
+            var xml = XDocument.Parse(parametrsAsXml);
+            var root = xml.Element("RSAKeyValue");
+            var p = new RSAParameters
+            {
+                Modulus = Convert.FromBase64String(root.Element("Modulus").Value),
+                Exponent = Convert.FromBase64String(root.Element("Exponent").Value)
+            };
+            if (root.Element("P") != null)
+            {
+                p.P = Convert.FromBase64String(root.Element("P").Value);
+                p.Q = Convert.FromBase64String(root.Element("Q").Value);
+                p.DP = Convert.FromBase64String(root.Element("DP").Value);
+                p.DQ = Convert.FromBase64String(root.Element("DQ").Value);
+                p.InverseQ = Convert.FromBase64String(root.Element("InverseQ").Value);
+            }
+            rsa.ImportParameters(p);
+        }
+
+        public static string GenerateSignature(string data)
+        {
+            byte[] dataBytes = Encoding.Unicode.GetBytes(data);
+            var sha = SHA256.Create();
+            var hashedData = sha.ComputeHash(dataBytes);
+
+            var rsa = RSA.Create();
+            PublickKey = rsa.ToXmlStringExt(false); // Исключение закрытого ключа
+            return Convert.ToBase64String(rsa.SignHash(hashedData, 
+                HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1));
+        }
+
+        public static bool ValidateSignature(string data, string signature)
+        {
+            byte[] dataBytes = Encoding.Unicode.GetBytes(data);
+            var sha = SHA256.Create();
+            var hashedData = sha.ComputeHash(dataBytes);
+
+            byte[] signatureBytes = Convert.FromBase64String(signature);
+
+            var rsa = RSA.Create();
+            rsa.FromXmlStringExt(PublickKey);
+
+            return rsa.VerifyHash(hashedData, signatureBytes,
+                HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1);
+        }
     }
 }
