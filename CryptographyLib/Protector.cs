@@ -4,6 +4,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using System.Xml.Linq;
+using System.Security.Principal;
 
 namespace CryptographyLib
 {
@@ -52,7 +53,34 @@ namespace CryptographyLib
 
         private static Dictionary<string, User> Users = new Dictionary<string, User>();
 
-        public static User Register(string username, string password)
+        /// <summary>
+        /// Added with aytorisation and autentification part of project
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="roles"></param>
+        /// <returns></returns>
+        /// 
+
+        public static void RegisterSomeUsers()
+        {
+            Register("Alice", "Pa$$w0rd", new[] { "Admins" });
+            Register("Bob", "Pa$$w0rd", new[] { "Sales", "TeamLeads" });
+            Register("Eve", "Pa$$w0rd");
+        }
+
+        public static void LogIn(string username, string password)
+        {
+            if (CheckPassword(username, password))
+            {
+                var identity = new GenericIdentity(username, "PacktAuth");
+                var principal = new GenericPrincipal(identity, Users[username].Roles);
+                System.Threading.Thread.CurrentPrincipal = principal;
+            }
+        }
+        // ------------------------------------------------------------------------------------------------
+
+        public static User Register(string username, string password, string[] roles = null)
         {
             // Генерация соли
             var rng = RandomNumberGenerator.Create();
@@ -70,7 +98,8 @@ namespace CryptographyLib
             {
                 Name = username,
                 Salt = saltText,
-                SaltedHashedPassword = saltedHashedPassword
+                SaltedHashedPassword = saltedHashedPassword,
+                Roles = roles
             };
             Users.Add(user.Name, user);
 
@@ -79,7 +108,7 @@ namespace CryptographyLib
 
         public static bool CheckPassword(string username, string password)
         {
-            if (!Users.ContainsKey(username))            
+            if (!Users.ContainsKey(username))
                 return false;
 
             var user = Users[username];
@@ -147,7 +176,7 @@ namespace CryptographyLib
 
             var rsa = RSA.Create();
             PublickKey = rsa.ToXmlStringExt(false); // Исключение закрытого ключа
-            return Convert.ToBase64String(rsa.SignHash(hashedData, 
+            return Convert.ToBase64String(rsa.SignHash(hashedData,
                 HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1));
         }
 
